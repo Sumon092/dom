@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Hello js dom ,lets explore!
+        </h1>
+        <ul id="awesome-blog">
+            <li>awesome blogs-1</li>
+            <li>awesome blogs-2</li>
+            <li>awesome blogs-3</li>
+            <li>awesome blogs-4</li>
+        </ul>
+    </header>
+    <main id="childappend">
+        <article class="bloogs">
+            <h3>appendChild-1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam ullam nesciunt culpa voluptas quod
+                itaque nam dolor ab hic id, vero sapiente! Laboriosam ullam accusantium ipsa sint quo quam recusandae?
+            </p>
+        </article>
+        <article class="bloogs">
+            <h3>appendChild-2</h3>
+            <p>Explicabo, recusandae. Amet distinctio dicta laborum praesentium officiis reiciendis tempore voluptatibus
+                sed alias totam accusamus unde eum, aliquam impedit magnam nisi, eos aperiam dignissimos enim? Iusto
+                consequuntur consequatur hic aliquam?</p>
+        </article>
+        <article class="bloogs">
+            <h3>appendChild-3</h3>
+            <p>Molestias adipisci illum iure. Cupiditate, eius? Fugit recusandae nesciunt ut similique odio quam? Sequi
+                autem dolor incidunt sit vero amet placeat voluptatum nesciunt dolore doloremque ipsum, impedit veniam,
+                repudiandae provident!</p>
+        </article>
+    </main>
+    <script>
+
+        const li = document.createElement('li');
+        li.innerText = ('awesome blogs-5');
+        const ul = document.getElementById('awesome-blog');
+        ul.appendChild(li);
+
+        const article = document.createElement('article');
+        article.classList.add('bloogs');
+        const h3 = document.createElement('h3');
+        h3.innerText = ('appendChild-4');
+        const p = document.createElement('p');
+        p.innerText = ('Cupiditate, eius? Fugit recusandae nesciunt ut similique odio quam,a lorem epsum dolor set ement diye ki kora jai ta ami valo korei jani Cupiditate, eius? Fugit recusandae nesciunt ut similique odio quam,a lorem epsum dolor set ement diye ki kora jai ta ami valo korei jani Cupiditate, eius? Fugit recusandae nesciunt ut similique odio quam,a lorem epsum dolor set ement diye ki kora jai ta ami valo korei jani');
+        article.appendChild(h3);
+        article.appendChild(p);
+
+        const addchild = document.getElementById('childappend');
+        addchild.appendChild(article);
+
+        // alternative way to append child
+
+        article.innerHTML = ` <h3>My awesome blog - 5 </h3 >
+            <p>Cupiditate, eius? Fugit recusandae nesciunt ut similique odio quam,a lorem epsum dolor set ement diye ki kora jai ta ami valo korei jani Cupiditate, eius? Fugit recusandae nesciunt ut similique odio quam,a lorem epsum dolor set ement diye ki kora jai ta ami valo korei jani Cupiditate, eius? Fugit recusandae nesciunt ut similique odio quam,a lorem epsum dolor set ement diye ki kora jai ta ami valo korei jani</p> `
+
+        const blogs = document.getElementsByClassName('bloogs');
+        for (const bloogs of blogs) {
+            bloogs.style.border = '2px solid salmon';
+            bloogs.style.borderRadius = '20px';
+            bloogs.style.margin = '10px';
+            bloogs.style.padding = '10px';
+        }
+        // to show element by tagname
+        const blogtitle = document.getElementsByTagName('h3');
+        for (const h3 of blogtitle) {
+            console.log(h3.innerText);
+        }
+
+    </script>
+</body>
+
+</html>

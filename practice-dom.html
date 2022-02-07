@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Hello js Dom</h1>
+    </header>
+    <ul id="blog-list">
+        <li>my awesome blog-1</li>
+        <li>my awesome blog-2</li>
+        <li>my awesome blog-3</li>
+        <li>my awesome blog-4</li>
+    </ul>
+    <script>
+        const li = document.createElement('li');
+        li.innerText = ('my awesome blog-5');
+        const ul = document.getElementById('blog-list');
+        ul.appendChild(li);
+
+
+    </script>
+</body>
+
+</html>
